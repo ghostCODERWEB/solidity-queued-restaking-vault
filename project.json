@@ -1,0 +1,13 @@
+{
+  "name": "solidity-queued-restaking-vault",
+  "title": "Slashable queued staking vault",
+  "contract": "QueuedStakeVault",
+  "description": "ERC20 staking shares with delayed withdrawal requests, pro-rata losses and bounded admin slashing.",
+  "args": [
+    "$TOKEN",
+    86400,
+    2000,
+    "$ADMIN"
+  ],
+  "assumptions": "Centralized slash authority with a per-call rate ceiling; repeated slashes can remove most assets. Shares in the exit queue remain slashable until completion. No actual restaking service, evidence verification or operator registry. Virtual share offset reduces donation manipulation."
+}
